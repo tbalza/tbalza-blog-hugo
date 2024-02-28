@@ -1,0 +1,85 @@
+baseURL: https://tbalza.net/
+languageCode: en-us
+title: Tomas Balza
+theme: ["PaperMod"]
+
+menu:
+  main:
+    - identifier: github
+      name: Github
+      url: https://github.com/tbalza
+      weight: 20
+      params:
+    - identifier: linkedin
+      name: Linkedin
+      url: https://www.linkedin.com/in/tomas-balza-b075141b3/
+      weight: 30
+      params:
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts"]
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  description: "Tomas Balza"
+  DateFormat: "January, 2006"
+  defaultTheme: auto
+  # disableThemeToggle: true
+  ShowShareButtons: false
+  ShowReadingTime: false
+  # disableSpecial1stPost: true
+  displayFullLangName: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: false
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  TocOpen: true
+  # comments: false
+  label:
+    icon: profile-photo-2.jpg
+    text: "Tomas Balza"
+    iconHeight: 35
+  assets:
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  homeInfoParams:
+    Title: "Tomas Balza"
+    Content: >
+      ![profile2](/badge-saa.png)
+      ![profile](/badge-terraform.png)
+            
+      - Hello there! I'm an **AWS Certified Solutions Architect - Associate** and **HashiCorp Certified: Terraform Associate**, based in Barcelona, Spain.
+
+      - Here, you'll find articles and home labs, delving into topics like IaC, CI/CD pipelines, Git, Docker, Kubernetes, Cost Optimization, and Systems Design.    
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false

@@ -1,0 +1,322 @@
+/* Custom styles added to demo */
+
+.twitter-tweet {
+    margin: auto;
+}
+
+iframe {
+    border-radius: var(--radius) !important;
+}
+
+.home-info ul {
+    padding-inline-start: 20px;
+}
+
+.entry-cover img {
+    border: 1px solid var(--border);
+}
+
+/* hide light/dark theme switcher */
+.logo-switches {
+    display: none;
+}
+
+
+/* nav bar fix on mobile */
+@media screen and (max-width: 768px) {
+    #menu {
+        margin-top: -20px; /* Replace with the margin you want */
+        padding-left: 45px;
+    }
+}
+
+/* hide title in first page */
+.first-entry .entry-header h1 {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
+/* fix first page intro text spacing */
+.first-entry.home-info .entry-content {
+    padding-right:10px
+}
+
+/* make tags in post entry clickable */
+.post-entry .entry-footer {
+    z-index: 9998;
+}
+
+/* style the tags in post entry */
+.entry-footer a {
+    display: inline-block;
+    padding: 2px 4px; /* Minimal padding */
+    background-color: #f8f9fa; /* Bootstrap's light grey background */
+    border: 1px solid #dee2e6; /* Bootstrap's light grey border */
+    border-radius: .25rem; /* Bootstrap's border radius */
+    color: #636f7a; /* Bootstrap's dark grey text color */
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Bootstrap's transition */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Bootstrap's box shadow */
+}
+.entry-footer a:hover {
+    color: #212529; /* Bootstrap's dark grey text color */
+    background-color: #e2e6ea; /* Bootstrap's light grey hover background */
+    border-color: #dae0e5; /* Bootstrap's light grey hover border */
+}
+
+/* style tags within post */
+div.post-meta a {
+    display: inline-block;
+    padding: 2px 4px; /* Minimal padding */
+    background-color: #f8f9fa; /* Bootstrap's light grey background */
+    border: 1px solid #dee2e6; /* Bootstrap's light grey border */
+    border-radius: .25rem; /* Bootstrap's border radius */
+    color: #636f7a; /* Bootstrap's dark grey text color */
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Bootstrap's transition */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Bootstrap's box shadow */
+    margin-right: 3px;
+}
+div.post-meta a:hover {
+    color: #212529; /* Bootstrap's dark grey text color */
+    background-color: #e2e6ea; /* Bootstrap's light grey hover background */
+    border-color: #dae0e5; /* Bootstrap's light grey hover border */
+}
+
+.post-meta {
+    margin-top:5px;
+}
+
+/* light color of date inside post */
+div.post-meta span {
+    padding-top:3px;
+    color:#ccc;
+}
+
+.entry-footer span[title] {
+    color: #cccccc; /* Very light gray color */
+}
+
+/* sticky header */
+.header {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    background-color: var(--theme);
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.2);
+}
+/* sticky header buttons fix on mobile */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 768px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+}
+
+
+
+.main {
+    padding-top: 50px; /* Adjust this value to match your header's height */
+}
+
+/* profile picture and subtitle (hardcoded in header.html layouts/partials) */
+.logo a {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* profile picture itself styling */
+.logo a img {
+    margin-inline-end:0px;
+    margin-top:5px;
+}
+
+
+
+/* Font color changes */
+
+.entry-content {
+    color: #414952;
+}
+
+.post-content {
+    color: #414952;
+}
+
+a, button, body, h1, h2, h3, h4, h5, h6 {
+    color: #414952;
+}
+
+.logo a {
+    color: #414952;
+}
+
+.entry-header h2 {
+    color: #414952;
+}
+
+/* HomeInfo changes. Modify cert badges layout */
+
+.first-entry.home-info {
+    display: flex;
+    align-items: center;
+    min-height: 0px; /* Adjust this value as needed */
+    overflow: hidden; /* Add this to enable scrolling if the content exceeds the max height */
+    margin-bottom: 30px;
+}
+
+.first-entry.home-info .entry-content {
+    display: flex;
+    align-items: center;
+}
+
+.first-entry.home-info .entry-content p {
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.first-entry.home-info .entry-content p img {
+    width: 100%;
+    height: auto;
+}
+
+.first-entry.home-info .entry-content ul {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+@media (max-width: 768px) {
+    .first-entry.home-info {
+        flex-direction: column;
+    }
+
+    .first-entry.home-info .entry-content {
+        flex-direction: column;
+    }
+
+    .first-entry.home-info .entry-content p {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .first-entry.home-info .entry-content ul {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .first-entry.home-info .entry-content p img {
+        max-height: 170px;
+        width: auto;
+        padding-bottom: 25px;
+    }
+
+    .main {
+        padding-top:105px;
+    }
+
+}
+
+/* Home post changes. Make them into a grid */
+
+
+.post-entry { /* Allocate a single column when the width of the page is small. */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px 0px;
+}
+
+.post-entry .entry-cover {
+   padding-right: 15px;
+}
+
+@media (min-width: 700px) { /* Allocate two columns when there is enough width. The thumbnail is placed in the first column, while the rest of the children are placed in the second column. */
+    .post-entry {
+        grid-template-columns: 2fr 3fr;
+        grid-gap: 0px 10px;
+    }
+}
+
+.post-entry .entry-cover {
+    max-width: fit-content;
+    margin: auto;
+    grid-row: span 3;
+}
+
+.post-entry .entry-header {
+    align-self: center;
+}
+
+.post-entry .entry-content {
+    align-self: center;
+}
+
+.post-entry .entry-footer {
+    align-self: end;
+}
+
+
+/* Table of Contents
+
+@media (max-width: 768px) {
+    .toc {
+        display: none;
+    }
+}
+
+:root {
+    --nav-width: 1380px;
+    --article-width: 650px;
+    --toc-width: 300px;
+}
+
+details > summary {
+    display: none;
+}
+
+ */
+
+/* table of contents font color
+.inner a,
+.inner button,
+.inner body,
+.inner h1,
+.inner h2,
+.inner h3,
+.inner h4,
+.inner h5,
+.inner {
+    color: #636f7a;
+    line-height: 2;
+}
+
+ */
+
+/* global font change */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+#menu a {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+}
+
+#subtitle {
+    font-family: "Helvetica Neue";
+    font-weight: 300;
+}
