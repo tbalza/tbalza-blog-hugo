@@ -172,5 +172,5 @@ The `gh-pages` branch is special because GitHub Pages serves the contents of thi
 
 ![deploy](/posts/blog_hugo/deploy.png)
 
-After the `deploy.yml` workflow is pushed, Any future changes in the main branch, will trigger Hugo to generate an updated `/public/` folder and serve it in GitHub Pages.
+After the `deploy.yml` workflow is pushed, any future changes in the main branch, will trigger Hugo to generate an updated `/public/` folder and serve it in GitHub Pages.
 

@@ -70,10 +70,10 @@ params:
   homeInfoParams:
     Title: "Tomas Balza"
     Content: >
-      ![profile2](/badge-saa.png)
-      ![profile](/badge-terraform.png)
+      [![profile2](/badge-saa.png)](https://www.credly.com/badges/f42cb78b-65ca-4800-9b12-686bd6e6a1db/public_url)
+      [![profile](/badge-terraform.png)](https://www.credly.com/badges/a5f8ba5b-e5c7-40a0-ac8a-308e5766d24d/public_url)
             
-      - Hello there! I'm an **AWS Certified Solutions Architect - Associate** and **HashiCorp Certified: Terraform Associate**, based in Barcelona, Spain.
+      - Hello there! I'm a certified **AWS Certified Solutions Architect - Associate** and **HashiCorp Certified: Terraform Associate**, currently based in Barcelona, Spain.
 
       - Here, you'll find articles and home labs, delving into topics like IaC, CI/CD pipelines, Git, Docker, Kubernetes, Cost Optimization, and Systems Design.    
 

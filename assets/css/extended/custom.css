@@ -86,6 +86,29 @@ div.post-meta a:hover {
     border-color: #dae0e5; /* Bootstrap's light grey hover border */
 }
 
+/* style footer tags */
+ul.post-tags a {
+    display: inline-block;
+    padding: 2px 4px !important; /* Minimal padding */
+    background-color: #f8f9fa; /* Bootstrap's light grey background */
+    border: 1px solid #dee2e6; /* Bootstrap's light grey border */
+    border-radius: .25rem; /* Bootstrap's border radius */
+    color: #636f7a; /* Bootstrap's dark grey text color */
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Bootstrap's transition */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Bootstrap's box shadow */
+    margin-right: -7px;
+    font-size: 14px;
+    text-transform: lowercase;
+    line-height: 1.5;
+}
+
+ul.post-tags a:hover {
+    color: #212529; /* Bootstrap's dark grey text color */
+    background-color: #e2e6ea; /* Bootstrap's light grey hover background */
+    border-color: #dae0e5; /* Bootstrap's light grey hover border */
+}
+
 .post-meta {
     margin-top:5px;
 }
@@ -188,7 +211,7 @@ a, button, body, h1, h2, h3, h4, h5, h6 {
 }
 
 .first-entry.home-info .entry-content p img {
-    width: 100%;
+    width: 300px;
     height: auto;
 }
 
@@ -197,7 +220,7 @@ a, button, body, h1, h2, h3, h4, h5, h6 {
     max-width: 70%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .first-entry.home-info {
         flex-direction: column;
     }
@@ -309,6 +332,24 @@ body {
     font-size: 17px;
     line-height: 1.5;
     margin: 0;
+}
+
+/* change font size on mobile */
+@media screen and (max-width: 768px) {
+
+    /* within articles */
+    body {
+        font-size: 20px;
+    }
+
+    /* on first page */
+    .first-entry .entry-content {
+        font-size: 20px;
+    }
+
+    .entry-content {
+        font-size: 20px;
+    }
 }
 
 #menu a {
