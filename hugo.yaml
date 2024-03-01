@@ -5,15 +5,20 @@ theme: ["PaperMod"]
 
 menu:
   main:
-    - identifier: github
-      name: Github
+    - identifier: GitHub
+      name: GitHub
       url: https://github.com/tbalza
       weight: 20
       params:
-    - identifier: linkedin
-      name: Linkedin
-      url: https://www.linkedin.com/in/tomas-balza-b075141b3/
+    - identifier: linkedIn
+      name: LinkedIn
+      url: https://www.linkedin.com/in/tomas-balza-b075141b3
       weight: 30
+      params:
+    - identifier: YouTube
+      name: YouTube
+      url: https://www.youtube.com/@tbalza-tech
+      weight: 40
       params:
 
 enableInlineShortcodes: true

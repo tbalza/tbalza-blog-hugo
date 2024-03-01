@@ -109,6 +109,29 @@ ul.post-tags a:hover {
     border-color: #dae0e5; /* Bootstrap's light grey hover border */
 }
 
+/* style nav bar links */
+ul#menu a {
+ /*   display: inline-block; */
+    padding: 2px 4px !important; /* Minimal padding */
+    background-color: #f8f9fa; /* Bootstrap's light grey background */
+    border: 1px solid #dee2e6; /* Bootstrap's light grey border */
+    border-radius: .25rem; /* Bootstrap's border radius */
+    color: #636f7a; /* Bootstrap's dark grey text color */
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Bootstrap's transition */
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Bootstrap's box shadow */
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+ul#menu a:hover {
+    color: #212529; /* Bootstrap's dark grey text color */
+    background-color: #e2e6ea; /* Bootstrap's light grey hover background */
+    border-color: #dae0e5; /* Bootstrap's light grey hover border */
+}
+
 .post-meta {
     margin-top:5px;
 }
@@ -339,16 +362,16 @@ body {
 
     /* within articles */
     body {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     /* on first page */
     .first-entry .entry-content {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .entry-content {
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 
