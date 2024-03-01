@@ -2,37 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://tbalza.net/categories/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <loc>https://tbalza.net/tags/automation/</loc>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/code/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <loc>https://tbalza.net/tags/cost-optimization/</loc>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/gist/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <loc>https://tbalza.net/posts/blog_hugo/blog_hugo/</loc>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/markdown/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <loc>https://tbalza.net/tags/git/</loc>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/posts/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/posts/code_syntax/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/tags/syntax/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/categories/syntax/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/tags/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/categories/themes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/categories/</loc>
   </url>
 </urlset>
