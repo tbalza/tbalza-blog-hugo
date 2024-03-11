@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tomas Balza</title>
-    <link>https://tbalza.net/</link>
-    <description>Recent content on Tomas Balza</description>
+    <title>Aws on Tomas Balza</title>
+    <link>https://tbalza.net/tags/aws/</link>
+    <description>Recent content in Aws on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tbalza.net/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tbalza.net/tags/aws/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Terraform for Amazon API Gateway Deployment</title>
       <link>https://tbalza.net/posts/serverless_api/serverless_api/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://tbalza.net/posts/serverless_api/serverless_api/</guid>
       <description>This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint.</description>
-    </item>
-    <item>
-      <title>Deploy a Hugo-powered Blog on Github Pages using Github Actions</title>
-      <link>https://tbalza.net/posts/blog_hugo/blog_hugo/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/posts/blog_hugo/blog_hugo/</guid>
-      <description>In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees.</description>
     </item>
   </channel>
 </rss>
