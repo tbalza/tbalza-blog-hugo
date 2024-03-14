@@ -40,10 +40,11 @@
 
 /* #dee2e6 */
 
-.active {
-    font-size: 100%;
-    font-weight: bold;
+.toc .active {
+    color: #414952;
+    border-radius: 3px;
 }
+
 
 .toc ul {
     list-style-type: circle;
@@ -69,6 +70,7 @@
     box-shadow: 0 0px 0;
    /* box-decoration-break: clone;
     -webkit-box-decoration-break: clone; */
+    color: #414952
 }
 
 .toc a{
