@@ -26,7 +26,7 @@
     <loc>https://tbalza.net/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/posts/serverless_api/serverless_api/</loc>
+    <loc>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/tags/automation/</loc>
@@ -35,7 +35,7 @@
     <loc>https://tbalza.net/tags/cost-optimization/</loc>
     <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/posts/blog_hugo/blog_hugo/</loc>
+    <loc>https://tbalza.net/deploy-a-hugo-powered-blog-on-github-pages-using-github-actions/</loc>
     <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/tags/git/</loc>

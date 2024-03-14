@@ -10,9 +10,9 @@
     <atom:link href="https://tbalza.net/tags/api/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Terraform for Amazon API Gateway Deployment</title>
-      <link>https://tbalza.net/posts/serverless_api/serverless_api/</link>
+      <link>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/posts/serverless_api/serverless_api/</guid>
+      <guid>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</guid>
       <description>This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint.</description>
     </item>
   </channel>
