@@ -1,5 +1,7 @@
 /* Custom styles added to demo */
 
+
+
 .twitter-tweet {
     margin: auto;
 }
@@ -139,6 +141,7 @@ ul#menu a:hover {
     color: #212529; /* Bootstrap's dark grey text color */
     background-color: #e2e6ea; /* Bootstrap's light grey hover background */
     border-color: #dae0e5; /* Bootstrap's light grey hover border */
+    text-decoration: none !important;
 }
 
 .post-meta {

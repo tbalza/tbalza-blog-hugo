@@ -5,7 +5,7 @@ tags: ["terraform", "lambda", "aws", "api", "dynamodb"]
 #categories: [""]
 series: ["Terraform"]
 ShowToc: true
-TocOpen: false
+TocOpen: true
 cover:
     image: "/posts/serverless_api/cover.jpg"
     hiddenInSingle: true

@@ -5,7 +5,7 @@ tags: ["git", "automation", "cost optimization"]
 #categories: [""]
 series: ["Hugo Blog"]
 ShowToc: true
-TocOpen: false
+TocOpen: true
 cover:
     image: "/posts/blog_hugo/cover.jpg"
     hiddenInSingle: true
