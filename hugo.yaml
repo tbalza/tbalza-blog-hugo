@@ -3,6 +3,9 @@ languageCode: en-us
 title: Tomas Balza
 theme: ["PaperMod"]
 
+permalinks:
+  posts: /:title/
+
 menu:
   main:
     - identifier: GitHub
