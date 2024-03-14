@@ -13,8 +13,7 @@
 .toc {
     margin: 0 2px 5px 2px;
     background: var(--entry);
-    padding: 0px;
-    padding-top: 20px;
+    padding-top: 80px;
 }
 
 
@@ -83,3 +82,13 @@
         display: none;
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+    .toc {
+        margin: 0 2px 5px 2px;
+        background: var(--entry);
+        padding-top: 20px;
+    }
+}
+
