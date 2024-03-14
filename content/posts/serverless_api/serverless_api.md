@@ -7,7 +7,7 @@ series: ["Terraform"]
 ShowToc: true
 TocOpen: false
 cover:
-    image: "/posts/serverless_api/cover.png"
+    image: "/posts/serverless_api/cover.jpg"
     hiddenInSingle: true
 summary: "This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint."
 ---
