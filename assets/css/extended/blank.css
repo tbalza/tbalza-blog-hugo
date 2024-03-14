@@ -71,6 +71,11 @@
     -webkit-box-decoration-break: clone; */
 }
 
+.toc a{
+    color: #868686;
+}
+
+
 @media screen and (max-width: 768px) {
     .toc {
         display: none;
