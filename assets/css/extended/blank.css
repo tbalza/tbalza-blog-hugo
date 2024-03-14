@@ -11,10 +11,10 @@
 
 
 .toc {
-    margin: 0 2px 40px 2px;
+    margin: 0 2px 5px 2px;
     background: var(--entry);
     padding: 0px;
-    padding-top: 80px;
+    padding-top: 20px;
 }
 
 
