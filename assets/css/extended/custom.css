@@ -444,3 +444,12 @@ body {
     font-family: "Helvetica Neue";
     font-weight: 300;
 }
+
+.paginav {
+    font-size: 15px;
+    line-height: 1.4;
+    padding-bottom: 3px;
+}
+.paginav .next{
+    text-align: left;
+}

@@ -12,10 +12,11 @@ cover:
 summary: "This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint."
 ---
 
-This guide provides a detailed walkthrough on how to create and deploy an Amazon API Gateway resource using Terraform. It also illustrates how to call a Lambda function via an HTTPS endpoint, which will interact directly with DynamoDB.
+This guide offers a comprehensive step-by-step process on how to build and deploy an Amazon API Gateway resource using Terraform. It also demonstrates how to invoke a Lambda function through an HTTPS endpoint, which will directly interact with DynamoDB.
 
-One of the key advantages of using Terraform is the ability to launch the entire project with a single click. The concept of infrastructure as code is vital for projects as it enables tracking of configuration modifications and promotes effective collaboration within large teams.
+One of the primary benefits of using Terraform is the capability to launch the entire project with a single click. The principle of infrastructure as code is crucial for projects as it facilitates tracking of configuration changes and encourages efficient collaboration within large teams.
 
+## Getting Started
 For Mac users, you can install [Homebrew](https://docs.brew.sh/Installation) and set up AWS CLI, Terraform, and Bruno.
 
 ```bash
@@ -25,7 +26,7 @@ brew install bruno # An Opensource API client, we'll use for testing
 aws configure # Follow the steps to provide your AWS account credentials
 ```
 
-**(Do not run this in production, use a testing account instead)**
+**(We recommend using a testing account)**
 ```bash
 git clone https://github.com/tbalza/lambda-dynamodb-api.git
 cd lambda-dynamodb-api
@@ -33,37 +34,37 @@ cd lambda-dynamodb-api
 ```bash
 terraform init
 ```
-This will initialize terraform, and download all the necessary libraries and modules, so that our HCL code in main.tf can interact with AWS using the credentials we set up earlier with the CLI. All the needed files will be stored in the .terraform folder for later use.
+This will initialize terraform, and download all the necessary libraries and modules, enabling our HCL code in main.tf to interact with AWS using the credentials we set up earlier with the CLI. All the necessary files will be stored in the .terraform folder for future use.
 ![init](/posts/serverless_api/init.png)
 
 
 ```bash
 terraform plan -out tfplan
 ```
-This command lays out all the changes that will take place, evaluating the current state of resources and what is indicated as an end result in our code.
+This command outlines all the changes that will occur, assessing the current state of resources and what is specified as a final result in our code.
 ![plan](/posts/serverless_api/plan.png)
 
 ```bash
 terraform apply -auto-approve tfplan
 ```
-After the apply is run, it will go ahead and create and configure our infrastructure as described in our code.
+After running the apply command, it will proceed to create and configure our infrastructure as described in our code.
 ![apply](/posts/serverless_api/apply.png)
 
 
-after you're done you can clean up by
+Once you're finished, you can tidy up by
 
 ```bash
 terraform destroy
 ```
-Ideally you want to `terraform plan -destroy -out tfplan` and then `terraform apply tfplan` as this allows you to double check all changes before commiting them to aws.
+Ideally, you should use `terraform plan -destroy -out tfplan` and then `terraform apply tfplan` as this allows you to double-check all changes before committing them to AWS.
 
-## Break down of all the sections
+## Overview of all the sections
 
-Using the commands provided above, you can swiftly set up and test the infrastructure. Additionally, you can easily clean it up to avoid any unexpected charges in the future. In the upcoming sections, we'll provide a brief explanation of the function of each block.
+Using the commands provided above, you can quickly set up and test the infrastructure. Moreover, you can effortlessly clean it up to prevent any unexpected charges in the future. In the following sections, we'll provide a brief explanation of the function of each block.
 
 ### Setup IAM Permissions
 
-#### Create custom IAM policy
+**Create custom IAM policy**
 ```hcl
 
 module "iam_policy" {
@@ -103,9 +104,9 @@ module "iam_policy" {
   })
 }
 ```
-This is a custom stand alone policy that allows the principal who assumes it to edit DynamoDB and CW Logs.
+This is a standalone custom policy that allows the principal who assumes it to edit DynamoDB and CW Logs.
 
-#### Create role for lambda function, attach custom IAM policy and trusted entity
+**Create role for lambda function, attach custom IAM policy and trusted entity**
 
 ```hcl
 module "iam_assumable_role_lambda" {
@@ -135,9 +136,9 @@ data "aws_iam_policy_document" "custom_trust_policy" {
 }
 ```
 
-This creates a role, and attaches the previous policy to that role. Additionally it give the role the trusted entity required for the lambda role to assume it.
+This creates a role and attaches the previous policy to that role. It also assigns the role the trusted entity required for the lambda role to assume it.
 
-#### Create trigger equivalent to explicitly grant permissions to the API Gateway to invoke your Lambda function
+**Create trigger equivalent to explicitly grant permissions to the API Gateway to invoke your Lambda function**
 ```hcl
 resource "aws_lambda_permission" "apigw" {
   statement_id  = "AllowExecutionFromAPIGateway"
@@ -154,7 +155,7 @@ When creating resources via ClickOps, the trigger is automatically assigned to t
 ![trigger](/posts/serverless_api/trigger.png)
 ### Create Lambda Function
 
-#### lambda_function.py
+**lambda_function.py**
 
 ```python
 from __future__ import print_function
@@ -197,7 +198,7 @@ def lambda_handler(event, context):
 
 This lambda function is written in Python, and works with any table name we specify via the POST method. Actions such as, create, read, update, delete, list, echo and ping, are supported.
 
-#### Zip the lambda_function.py to enable uploading to AWS
+**Zip the lambda_function.py to enable uploading to AWS**
 
 ```hcl
 data "archive_file" "lambda_zip" {
@@ -208,7 +209,7 @@ data "archive_file" "lambda_zip" {
 ```
 We use built in TF tools to zip the Python script, which is needed in order to upload it to AWS via this method.
 
-#### Create lambda function from lambda_function.py
+**Create lambda function from lambda_function.py**
 ```hcl
 resource "aws_lambda_function" "example" {
   function_name = "LambdaFunctionsOverHttps"
@@ -225,7 +226,7 @@ resource "aws_lambda_function" "example" {
 Finally, we upload the lambda function and attach the role we created earlier.
 
 ### DynamoDB
-#### Create a simple dynamodb table
+**Create a simple dynamodb table**
 ```hcl
 module "dynamodb_table" {
   source  = "terraform-aws-modules/dynamodb-table/aws"
@@ -246,7 +247,7 @@ module "dynamodb_table" {
 This creates a table with an "id" primary column that will expect strings.
 
 ### API
-#### Create API
+**Create API**
 ```hcl
 resource "aws_api_gateway_rest_api" "DynamoDBOperations" {
   name           = "DynamoDBOperations"
@@ -257,9 +258,9 @@ resource "aws_api_gateway_rest_api" "DynamoDBOperations" {
   }
 }
 ```
-This creates de API by itself, and defines the end point configuration type.
+This creates the API by itself, and defines the end point configuration type.
 
-#### Create resource
+**Create resource**
 ```hcl
 resource "aws_api_gateway_resource" "DynamoDBManager" {
   rest_api_id = aws_api_gateway_rest_api.DynamoDBOperations.id
@@ -269,7 +270,7 @@ resource "aws_api_gateway_resource" "DynamoDBManager" {
 ```
 These are the various parts of your API that clients can access. They are represented as a hierarchical structure similar to a file path. For example, in the API endpoint https://api.example.com/users/profile, 'users' and 'profile' are resources. Resources can have child resources, creating a tree-like structure.
 
-#### Create POST method
+**Create POST method**
 ```hcl
 resource "aws_api_gateway_method" "post" {
   rest_api_id      = aws_api_gateway_rest_api.DynamoDBOperations.id
@@ -281,7 +282,7 @@ resource "aws_api_gateway_method" "post" {
 ```
 These are the HTTP methods (also known as verbs) that clients can use to interact with the resources. Common methods include GET, POST, PUT, DELETE, and PATCH. Each method represents a different type of operation that can be performed on a resource. For example, a GET method on a 'users' resource might retrieve a list of users, while a POST method on the same resource might create a new user.
 
-#### Link API to Lambda function
+**Link API to Lambda function**
 ```hcl
 resource "aws_api_gateway_integration" "lambda" {
   rest_api_id = aws_api_gateway_rest_api.DynamoDBOperations.id
@@ -297,7 +298,7 @@ resource "aws_api_gateway_integration" "lambda" {
 `uri = aws_lambda_function.example.invoke_arn`: This line sets the URI of the integrated backend. In this case, it's a Lambda function, and the ARN (Amazon Resource Name) used to invoke the function is retrieved from another resource named `example` of type `aws_lambda_function`.
 
 
-#### Create response code
+**Create response code**
 ```hcl
 resource "aws_api_gateway_method_response" "response" {
   rest_api_id = aws_api_gateway_rest_api.DynamoDBOperations.id
@@ -310,7 +311,7 @@ resource "aws_api_gateway_method_response" "response" {
 
 status_code = "200": This line sets the HTTP status code for the method response. In this case, it's "200", which typically represents a successful HTTP request.
 
-#### Integrate response code
+**Integrate response code**
 ```hcl
 resource "aws_api_gateway_integration_response" "lambda" {
   depends_on  = [aws_api_gateway_integration.lambda, aws_api_gateway_method_response.response]
@@ -326,7 +327,7 @@ This creates an integration response that depends on the successful creation of 
 
 Both blocks are part of configuring an API Gateway to handle responses from a backend service, in this case, a Lambda function.
 
-#### Deploy in "Dev"
+**Deploy in "Dev"**
 ```hcl
 resource "aws_api_gateway_deployment" "dev" {
   depends_on  = [aws_api_gateway_integration.lambda]
@@ -349,9 +350,9 @@ This line from `outputs.tf` prints out our Invoke URL generated earlier, and dis
 
 ![output](/posts/serverless_api/output.png)
 
-### Test with API Client
+## Test with API Client
 
-Open Bruno. Create Collection > New Request > Past the invoke URL generated inside URL: POST
+Open Bruno. Create Collection > New Request > Paste the invoke URL generated inside URL: POST
 
 ![api-client](/posts/serverless_api/api-client.png)
 
@@ -369,7 +370,7 @@ Then in the BODY section, select Raw > JSON, past the code below, and press cmd+
 }
 ```
 
-### Verify Results in DynamoDB
+## Verify Results in DynamoDB
 
 Go to DynamoDB > Tables > lambda-apigateway > Explore Table Items
 ![dynamodb](/posts/serverless_api/dynamodb.png)
@@ -377,13 +378,13 @@ Go to DynamoDB > Tables > lambda-apigateway > Explore Table Items
 Here you'll see that our POST payload, sent to the API Invoke URL, interacts with Lambda, which in turn modifies our DynamoDB table.
 
 
-### Clean up
+## Clean up
 ![destroy](/posts/serverless_api/destroy.png)
 
 Run this command to delete all our previously created resources and configurations.
 
-### Take Aways
+## Key Takeaways
 
 We've created an API that is publicly accessible via our Invoke URL, which allows us to interact with the DynamoDB table directly via a Lambda function.
 
-In future articles we'll delve deeper into GitOps, and CI/CD pipelines building on this knowledge, and implement authentication, DNS and certificate configurations.
+In future articles, we'll delve deeper into GitOps, and CI/CD pipelines building on this knowledge, and implement authentication, DNS and certificate configurations.
