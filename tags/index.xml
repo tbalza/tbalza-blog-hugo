@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bash</title>
+      <link>https://tbalza.net/tags/bash/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dns</title>
+      <link>https://tbalza.net/tags/dns/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://tbalza.net/tags/docker/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ecs</title>
+      <link>https://tbalza.net/tags/ecs/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/ecs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssl</title>
+      <link>https://tbalza.net/tags/ssl/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>https://tbalza.net/tags/terraform/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/terraform/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Api</title>
       <link>https://tbalza.net/tags/api/</link>
@@ -34,13 +76,6 @@
       <link>https://tbalza.net/tags/lambda/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://tbalza.net/tags/lambda/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terraform</title>
-      <link>https://tbalza.net/tags/terraform/</link>
-      <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/tags/terraform/</guid>
       <description></description>
     </item>
     <item>

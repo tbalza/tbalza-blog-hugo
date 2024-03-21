@@ -6,8 +6,15 @@
     <description>Recent content on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Container Orchestration of HA Application with ECS</title>
+      <link>https://tbalza.net/container-orchestration-of-ha-application-with-ecs/</link>
+      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/container-orchestration-of-ha-application-with-ecs/</guid>
+      <description>This guide outlines the steps to launch a highly available WordPress application, structured as a four-tier architecture, using ECS for container orchestration.</description>
+    </item>
     <item>
       <title>Using Terraform for Amazon API Gateway Deployment</title>
       <link>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</link>
@@ -16,10 +23,10 @@
       <description>This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint.</description>
     </item>
     <item>
-      <title>Deploy a Hugo-powered Blog on Github Pages using Github Actions</title>
-      <link>https://tbalza.net/deploy-a-hugo-powered-blog-on-github-pages-using-github-actions/</link>
+      <title>Deploy a Hugo Blog on Github Pages using Github Actions</title>
+      <link>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</link>
       <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/deploy-a-hugo-powered-blog-on-github-pages-using-github-actions/</guid>
+      <guid>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</guid>
       <description>In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees.</description>
     </item>
   </channel>

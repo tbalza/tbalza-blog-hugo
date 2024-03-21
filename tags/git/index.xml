@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Deploy a Hugo-powered Blog on Github Pages using Github Actions</title>
-      <link>https://tbalza.net/deploy-a-hugo-powered-blog-on-github-pages-using-github-actions/</link>
+      <title>Deploy a Hugo Blog on Github Pages using Github Actions</title>
+      <link>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</link>
       <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/deploy-a-hugo-powered-blog-on-github-pages-using-github-actions/</guid>
+      <guid>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</guid>
       <description>In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees.</description>
     </item>
   </channel>
