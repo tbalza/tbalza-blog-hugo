@@ -317,6 +317,7 @@ a, button, body, h1, h2, h3, h4, h5, h6 {
     /* Main page background */
     .list {
         background: radial-gradient(circle at center top, white 65%, #cecece 100%);
+        background-attachment: fixed;
         height: 100vh;
         width: 100%;
     }
