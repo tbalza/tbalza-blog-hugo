@@ -78,6 +78,8 @@ In cloud environments like AWS, permissions and roles serve as foundational elem
 - ***EC2 Role:*** Similar to the ECS Task Role, it assigns permissions to the EC2 instances within the cluster to interact with AWS services necessary for their operation, like EFS or the EC2 Container Service itself.
 - ***Listeners and Target Group:*** Direct traffic from the ALB to the appropriate backend services based on the request, enabling secure and efficient traffic management.
 
+A heads-up: Grasping the following details requires a thorough understanding of each AWS service and the complex ways in which different permission levels interweave. Below is a service-by-service breakdown, detailing the necessary configurations to facilitate communication between individual services.
+
 **1. Amazon Elastic Container Service (ECS):**
 - *ECS Security Group (Inbound)*: Allow traffic from the Application Load Balancer (ALB).
 - *ECS Security Group (Outbound)*: Allow traffic to Amazon RDS, ECS, and the internet.
@@ -99,7 +101,7 @@ In cloud environments like AWS, permissions and roles serve as foundational elem
 - *EC2 Security Group (defined in ASG module)*: Inbound: Allow traffic on ports `80`, `3306`, and `2049` from VPC private subnets.
 
 **3. Amazon RDS:**
-- *Security Group*: Inbound: Allow traffic from the ECS Security Group on MySQL/PostgreSQL port (typically `3306`/`5432`).
+- *Security Group*: Inbound: Allow traffic from the ECS Security Group on MySQL port `3306`.
 
 **4. Application Load Balancer (ALB):**
 
@@ -164,6 +166,9 @@ output "alb" {
   value = module.alb.dns_name
 }
 ```
+This module efficiently establishes a secure, highly available AWS VPC with structured network segmentation (public, private, database subnets) enhancing resilience across multiple zones. Public subnets connect directly to the internet via an Internet Gateway. Private and database subnets, routed for internal traffic, use a NAT Gateway, enabling internet access without external exposure.
+
+![vpn](/posts/docker_wordpress/vpn.png)
 
 ### ECS Cluster
 
@@ -197,9 +202,9 @@ module "ecs_cluster" {
       }
     }
   }
-  tags = local.tags
 }
 ```
+Since we are not yet using auto-scaling, this module only defines the cluster name and the capacity provider, that will be used later on by the service. (The provider strategy is a placeholder for later implementation)
 
 ### ECS Service
 
@@ -267,6 +272,33 @@ module "ecs_service" {
   }
 }
 ```
+Using a t3.micro instance for testing purposes, here we're maxing out a single task (minus the  aws agent overhead) to occupy the total available computing resources (CPU and memory). Additionally, we define a snippet of the container definition, where we configure the first stage for using an EFS volume for data storage. Furthermore, we connect the ecs task to the load balancer telling it will receive traffic on port 8080.
+
+The volume definition allows the docker container to have WordPress data persistence outside the container itself.
+
+![volume](/posts/docker_wordpress/volume.png)
+
+If we were using a docker-compose.yml file this chunk,
+
+```hcl
+ volume = {
+    wordpress_data = {
+      efs_volume_configuration = {
+        file_system_id     = module.efs.id
+        transit_encryption = "ENABLED"
+        authorization_config = {
+          access_point_id = module.efs.access_points["root"]["id"]
+          iam             = "ENABLED"
+        }
+      }
+    }
+  }
+```
+Would be the ECS equivalent of this,
+
+![persistence](/posts/docker_wordpress/persistence.png)
+
+
 #### Container Definitions
 
 ```hcl
@@ -349,6 +381,13 @@ module "ecs_service" {
     }
   }
 ```
+The current [Bitnami image](https://github.com/bitnami/containers/tree/main/bitnami/wordpress) used for deploying an ECS EC2 application offers a ready-to-use, standardized solution that reduces setup time and maintains consistency across different settings.
+
+Conversely, an extensive CI/CD pipeline using Docker provides significantly more customization and control. In this framework, developers can tailor Docker images to specific requirements, update and manage versions through a Version Control System (VCS), and monitor modifications over time.
+
+For our purposes, this image supports customization through environment variables specified in the container definitions.
+
+Additionally, we set the parameters for cloudwatch to log the events related to our task.
 
 ### ALB
 
@@ -449,6 +488,10 @@ module "alb" {
 }
 ```
 
+This block sets up an AWS Application Load Balancer (ALB) redirecting all HTTP traffic to HTTPS, and then all that TLS traffic to our target group that listens on 8080 (forward to ex_ecs). It also sets up health monitoring.
+
+![listner](/posts/docker_wordpress/listener.png)
+
 ### Autoscaling
 
 ```hcl
@@ -505,6 +548,12 @@ module "autoscaling" {
 }
 ```
 
+This further links ECS with the load balancer. It defines our Highly Available desired state, where to instances should be always available redundantly in two different AZs.
+
+It sets the required policies to grant permissions to the EC2 instance itself for accessing the ECS container management, SSM for instance configuration (and console access), EFS for file storage access, RDS for database access, and access to the Secrets Manager.
+
+Additionally, it defines that a payload should be run on the provisioned ec2 instances before the container service runs.
+
 #### Bash Script
 
 ```hcl
@@ -524,6 +573,14 @@ module "autoscaling" {
     EOF
   EOT
 ```
+
+Since we're not on fargate, our ec2 instance needs to know that it belongs to de cluster we defined earlier.
+
+It also needs to install the efs-utils agent, and mount it to `/mnt/efs` before the container runs, so it can successfully mount the persistent volume defined earlier in the container definitions.
+
+Without this crucial step or instance won't be ready to connect to the container, and the volume will not mount correctly, and instead create internal volumes on the attached SSD very time it's instantiated,
+
+![efs-error](/posts/docker_wordpress/efs-error.png)
 
 #### Security Groups
 
@@ -605,6 +662,8 @@ resource "aws_iam_policy" "rds_full_access" {
 }
 ```
 
+This is an example of the trade-off between modules and using direct resources. Since the modules don't directly support connecting RDS and EFS, we can create the necessary security groups for added services to interact.
+
 ### RDS
 
 ```hcl
@@ -663,6 +722,8 @@ module "security_group" {
   tags = local.tags
 }
 ```
+Here we simply create the rds instance, and set the password to be retrieved from the secrets manager later on. The depends_on definition makes sure the module has generated the password before it's executed. This usually isn't required because TF can figure out execution order dependencies, but in this case it is warranted.
+
 
 ### EFS
 
@@ -744,6 +805,9 @@ module "efs" {
   }
 }
 ```
+When our container can mount and read/write with our EFS filesystem, the volumes from its perspective looks like this. 8 exabytes, tells us about the potential scalability of this service (also warns us of reasons it could get out hand and need monitoring)
+
+![efs](/posts/docker_wordpress/efs.png)
 
 ### ACM 
 
@@ -763,6 +827,8 @@ module "acm" {
   }
 }
 ```
+
+Configuring TLS is deceptively simple in this setup. We don't need Route53 at all, since our namecheap.com registrar points to Cloudflare NS records, which can be managed via API tokens that later define our CNAME records. We simply generate the certificate with AWS with DNS verification and pass that on to our next module.
 
 ### DNS
 
@@ -806,6 +872,12 @@ resource "cloudflare_record" "wp_cname" {
   proxied = false
 }
 ```
+
+Our nanecheap.com domain tbalza.net (which is hosted by GitHub pages, as per the first blog post) was changed to Cloudflare DNS management, by pointed to their NS records.
+
+![dns](/posts/docker_wordpress/dns.png)
+
+With our Cloudflare API token, we can take the output of `module.acm.acm_certificate_domain_validation_options` that generates a map within a list and with TF convert this output, to call for the change of the CNAME wp. to be that which is dynamically generated by AWS.
 
 ### Secrets Manager
 

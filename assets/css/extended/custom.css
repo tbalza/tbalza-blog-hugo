@@ -454,3 +454,24 @@ body {
 .paginav .next{
     text-align: left;
 }
+
+/* rounded border in code boxes */
+.chroma {
+    position: relative; /* Needed for absolute positioning of pseudo-elements */
+    overflow: auto; /* Make sure this is scrollable */
+    border-radius: 8px; /* Maintain your border-radius */
+}
+
+.chroma::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 8px; /* Apply the same border-radius */
+    pointer-events: none; /* Prevent the pseudo-element from interfering with scrolling or clicking */
+    z-index: 1; /* Ensure it's above the content */
+    box-shadow: 0 0 0 10px white; /* Adjust the color to match your background */
+}
+
