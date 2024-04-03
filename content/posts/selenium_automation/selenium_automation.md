@@ -99,7 +99,7 @@ RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-ke
     rm -rf /var/lib/apt/lists/*
 ```
 
-Since we are using git submodules, fetching the script with `git clone --recurse-submodules https://github.com/tbalza/cita-checker.git` will allow us to create custom features, such as VNC access for manual interaction, while keeping the original repo untouched, streamlining development.
+With a submodule configuration other collaborators can fetch the script with `git clone --recurse-submodules https://github.com/tbalza/cita-checker.git` and create custom features, such as VNC access for manual interaction, while keeping the original SB repo untouched, streamlining development.
 
 ```dockerfile
 #===========================================
@@ -123,6 +123,24 @@ RUN mkdir -p /.novnc && cd /.novnc \
 
 EXPOSE 5900
 EXPOSE 6080
+```
+The steps for a developer to set up this submodule configuration are:
+```bash
+# Initialize main project repository
+cd /cita-checker
+git init
+git add .
+git commit -m "Initial commit"
+
+# Add remote repository
+git remote add origin https://github.com/tbalza/cita-checker
+git push -u origin master
+
+# Add sumbodule
+git submodule add https: //github.com/seleniumbase/SeleniumBase SeleniumBase
+git add .
+git commit -m "Add seleniumbase submodule"
+git push
 ```
 
 With an entry point we can define the commands that will keep all our extra services running, tying up all the configuration. In our setup configuring Xvfb is crucial for our desktop environment and VNC to work alongside the SeleniumBase webdriver in headful mode.
