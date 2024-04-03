@@ -6,8 +6,15 @@
     <description>Recent content in Automation on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leveraging Docker and Selenium for Efficient Appointment Checking</title>
+      <link>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</guid>
+      <description>This article explores an automation use-case with Selenium and Docker to periodically access a multi-page js form and check for available appointments.</description>
+    </item>
     <item>
       <title>Deploy a Hugo Blog on Github Pages using Github Actions</title>
       <link>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</link>

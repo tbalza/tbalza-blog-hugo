@@ -6,8 +6,15 @@
     <description>Recent content in Docker on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leveraging Docker and Selenium for Efficient Appointment Checking</title>
+      <link>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</guid>
+      <description>This article explores an automation use-case with Selenium and Docker to periodically access a multi-page js form and check for available appointments.</description>
+    </item>
     <item>
       <title>Container Orchestration of HA Application with ECS</title>
       <link>https://tbalza.net/container-orchestration-of-ha-application-with-ecs/</link>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Git on Tomas Balza</title>
-    <link>https://tbalza.net/tags/git/</link>
-    <description>Recent content in Git on Tomas Balza</description>
+    <title>Selenium on Tomas Balza</title>
+    <link>https://tbalza.net/tags/selenium/</link>
+    <description>Recent content in Selenium on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://tbalza.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://tbalza.net/tags/selenium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leveraging Docker and Selenium for Efficient Appointment Checking</title>
       <link>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
       <guid>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</guid>
       <description>This article explores an automation use-case with Selenium and Docker to periodically access a multi-page js form and check for available appointments.</description>
-    </item>
-    <item>
-      <title>Deploy a Hugo Blog on Github Pages using Github Actions</title>
-      <link>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</link>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</guid>
-      <description>In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees.</description>
     </item>
   </channel>
 </rss>

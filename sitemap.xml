@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://tbalza.net/tags/automation/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/tags/docker/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/tags/git/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/posts/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/tags/python/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/tags/selenium/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/tags/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://tbalza.net/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://tbalza.net/tags/bash/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -11,25 +38,13 @@
     <loc>https://tbalza.net/tags/dns/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/docker/</loc>
-    <lastmod>2024-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tbalza.net/tags/ecs/</loc>
-    <lastmod>2024-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/posts/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/tags/ssl/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/</loc>
-    <lastmod>2024-03-20T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tbalza.net/tags/terraform/</loc>
-    <lastmod>2024-03-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/</loc>
     <lastmod>2024-03-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/tags/api/</loc>
@@ -47,16 +62,10 @@
     <loc>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</loc>
     <lastmod>2024-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://tbalza.net/tags/automation/</loc>
-    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://tbalza.net/tags/cost-optimization/</loc>
     <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</loc>
-    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://tbalza.net/tags/git/</loc>
     <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://tbalza.net/categories/</loc>
