@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Hugo Blog on Github Pages using Github Actions"
+title: "Blog Deployment on Github Pages using Github Actions"
 date: "2024-02-28"
 tags: ["git", "automation", "cost optimization"]
 #categories: [""]
