@@ -16,10 +16,10 @@
       <description>This article explores an automation use-case with Selenium and Docker to periodically access a multi-page js form and check for available appointments.</description>
     </item>
     <item>
-      <title>Deploy a Hugo Blog on Github Pages using Github Actions</title>
-      <link>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</link>
+      <title>Blog Deployment on Github Pages using Github Actions</title>
+      <link>https://tbalza.net/blog-deployment-on-github-pages-using-github-actions/</link>
       <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/deploy-a-hugo-blog-on-github-pages-using-github-actions/</guid>
+      <guid>https://tbalza.net/blog-deployment-on-github-pages-using-github-actions/</guid>
       <description>In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees.</description>
     </item>
   </channel>
