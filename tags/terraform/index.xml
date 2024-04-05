@@ -16,10 +16,10 @@
       <description>This guide outlines the steps to launch a highly available WordPress application, structured as a four-tier architecture, using ECS for container orchestration.</description>
     </item>
     <item>
-      <title>Using Terraform for Amazon API Gateway Deployment</title>
-      <link>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</link>
+      <title>Provisioning Amazon API Gateway with Terraform</title>
+      <link>https://tbalza.net/provisioning-amazon-api-gateway-with-terraform/</link>
       <pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/using-terraform-for-amazon-api-gateway-deployment/</guid>
+      <guid>https://tbalza.net/provisioning-amazon-api-gateway-with-terraform/</guid>
       <description>This article offers a comprehensive tutorial on creating and deploying an Amazon API Gateway resource using Terraform, and demonstrates how to invoke a Lambda function through an HTTPS endpoint.</description>
     </item>
   </channel>
