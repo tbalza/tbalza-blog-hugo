@@ -1,5 +1,5 @@
 ---
-title: "Using Terraform for Amazon API Gateway Deployment"
+title: "Provisioning Amazon API Gateway with Terraform"
 date: "2024-03-11"
 tags: ["terraform", "lambda", "aws", "api", "dynamodb"]
 #categories: [""]
