@@ -16,7 +16,7 @@ This article showcases a Proof of Concept (PoC) where the end result is a fully 
 
 ![diagram](/posts/kubernetes_cicd/diagram.drawio.png)
 
-All applications will launch and operate seamlessly after executing this command from the project home path:
+In this project, all applications will launch and operate seamlessly after executing this command from the project home path:
 
 ```bash
 terraform -chdir="/terraform/01-eks-cluster/" apply -auto-approve && \
@@ -40,7 +40,7 @@ Credentials are dynamically generated and accessible through SSM Parameter Store
 
 Once operational, any approved modifications to the Django app will automatically trigger the CI/CD pipeline (pictured in the diagram above), and new updates will be readily accessible via the generated subdomain.
 
-Find the complete setup on instructions in the [GitHub repository](https://github.com/tbalza/kubernetes-cicd-zt).
+You can find the complete setup on instructions in the [GitHub repository](https://github.com/tbalza/kubernetes-cicd-zt).
 
 ### Tooling Overview
 
@@ -68,7 +68,7 @@ DevOps integrates development and operations to enhance efficiency and reliabili
 
 Adapting to this balanced environment requires fostering collaboration from key stakeholders, including management and developers.
 
-This collaboration effort is often aided by demonstrating the practical benefits of DevOps through ***Proofs of Concept*** that align with business goals, and improve software quality without slowing things down.
+This collaboration effort is often aided by demonstrating the practical benefits of DevOps through *Proofs of Concept* that align with business goals, and improve software quality without slowing things down.
 
 ### Zero-Touch Setup
 
