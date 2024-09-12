@@ -659,7 +659,7 @@ spec:
       labels:
         syncorder: '{{.path.basename}}' # Label for rollingSync matchExpressions
 ```
-Using ArgoCD's RollingSync we are able to deploy the apps in the correct sequence as to not require user intervention:
+ArgoCD's RollingSync allows us to sequentially deploy applications without requiring user input:
 
 1. **ArgoCD:** is deployed first by itself, as it needs to restart with `job.yaml` in order to correctly load ENV vars for CMP value substitutions in other apps. It's able to use dynamic values initially with Terraform's bootstrap stage.
 2. **Image Updater, SonarQube:** SonarQube needs to be ready by the time the Jenkins pipeline is executed.
