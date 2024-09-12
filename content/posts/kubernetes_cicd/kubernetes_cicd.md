@@ -671,7 +671,7 @@ ArgoCD's RollingSync allows us to sequentially deploy applications without requi
 
 We've covered different automation techniques using well-established open-source tools to successfully provision and deploy a complete CI/CD pipeline in a Kubernetes cluster.
 
-These patterns not only align with the DevOps principles of efficiency and reliability, but also establish a single source of truth. By defining configurations in a declarative fashion and maintaining a fully automated pipeline, we significantly enhance the speed of deliveries across environments and reduce the potential for human error.
+These patterns align with the DevOps principles of efficiency and reliability, and also establish a single source of truth. By defining configurations in a declarative fashion and maintaining a fully automated pipeline, we can improve the speed of deliveries across environments and reduce the potential for human error.
 
 **Areas for improvement**
 
