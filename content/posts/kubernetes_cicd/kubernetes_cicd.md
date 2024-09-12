@@ -537,13 +537,13 @@ metadata:
   name: argocd-image-updater
   namespace: argocd
 ```
-With a Config Management Plugin, we can extend ArgoCD's the default functionality to support `envsubst` when building the apps. While Kustomize supports loading environment variables in the resulting pods of the installation, it cannot, by design, reference *external* variables that are not hardcoded for its own setup.
+With a Config Management Plugin, we can enhance Argo CD's default capabilities to include `envsubst` during app builds. While Kustomize allows for the inclusion of environment variables in the pods resulting from an installation, it cannot reference *external* variables that aren't hardcoded in its own configuration.
 
-`AVAILABLE_VARS=$(env | cut -d "=" -f 1 | awk '{print "$"$1}' | tr "\n" " ")` pre loads all the defined ENV vars we plan to use in Kustomization, to ensure variables in other scripts are not unintentionally substituted with blank spaces.
+To address this, we first use `AVAILABLE_VARS=$(env | cut -d "=" -f 1 | awk '{print "$"$1}' | tr "\n" " ")` to preload all defined ENV vars necessary for Kustomization, ensuring that other scripts' variables are not replaced with blanks unintentionally.
 
-`kustomize build | envsubst "$AVAILABLE_VARS"` runs for every app, allowing us to dynamically reference values like the AWS Account Number `${ARGOCD_AWS_ACCOUNT}` when defining a service account (that would otherwise need to be static).
+Right after, the command `kustomize build | envsubst "$AVAILABLE_VARS"` executes for each app, dynamically substituting all pre-defined variables, such as the AWS Account Number `${ARGOCD_AWS_ACCOUNT}` when defining service accounts, which would typically be static.
 
-Even though this could be considered a GitOps anti-pattern, in some situations where large number of AWS accounts are being managed, this technique can be an acceptable compromise towards achieving automation.
+Although this approach might be seen as a GitOps anti-pattern, it is a practical solution in scenarios managing numerous AWS accounts, offering a balanced approach to automation.
 
 #### ExternalDNS
 ```hcl {hl_lines=[3]}
