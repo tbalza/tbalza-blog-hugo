@@ -6,8 +6,15 @@
     <description>Recent content on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Touch Provisioning &amp; Deployment of Kubernetes CI/CD Pipeline</title>
+      <link>https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/</guid>
+      <description>This article explores a Proof of Concept for zero-touch provisioning and deployment, highlighting efficient operational workflows.</description>
+    </item>
     <item>
       <title>Leveraging Docker and Selenium for Efficient Appointment Checking</title>
       <link>https://tbalza.net/leveraging-docker-and-selenium-for-efficient-appointment-checking/</link>

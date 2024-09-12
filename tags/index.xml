@@ -6,8 +6,99 @@
     <description>Recent content in Tags on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Argocd</title>
+      <link>https://tbalza.net/tags/argocd/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/argocd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Django</title>
+      <link>https://tbalza.net/tags/django/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/django/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eks</title>
+      <link>https://tbalza.net/tags/eks/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/eks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elk</title>
+      <link>https://tbalza.net/tags/elk/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/elk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fluentbit</title>
+      <link>https://tbalza.net/tags/fluentbit/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/fluentbit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gitops</title>
+      <link>https://tbalza.net/tags/gitops/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/gitops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Helm</title>
+      <link>https://tbalza.net/tags/helm/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/helm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jenkins</title>
+      <link>https://tbalza.net/tags/jenkins/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kubernetes</title>
+      <link>https://tbalza.net/tags/kubernetes/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kustomize</title>
+      <link>https://tbalza.net/tags/kustomize/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/kustomize/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prometheus</title>
+      <link>https://tbalza.net/tags/prometheus/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/prometheus/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sonarqube</title>
+      <link>https://tbalza.net/tags/sonarqube/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/sonarqube/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terraform</title>
+      <link>https://tbalza.net/tags/terraform/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/tags/terraform/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Automation</title>
       <link>https://tbalza.net/tags/automation/</link>
@@ -69,13 +160,6 @@
       <link>https://tbalza.net/tags/ssl/</link>
       <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://tbalza.net/tags/ssl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terraform</title>
-      <link>https://tbalza.net/tags/terraform/</link>
-      <pubDate>Wed, 20 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://tbalza.net/tags/terraform/</guid>
       <description></description>
     </item>
     <item>

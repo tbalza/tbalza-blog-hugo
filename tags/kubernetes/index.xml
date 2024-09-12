@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Kubernetes on Tomas Balza</title>
+    <link>https://tbalza.net/tags/kubernetes/</link>
+    <description>Recent content in Kubernetes on Tomas Balza</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://tbalza.net/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zero-Touch Provisioning &amp; Deployment of Kubernetes CI/CD Pipeline</title>
+      <link>https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/</link>
+      <pubDate>Sun, 01 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/</guid>
+      <description>This article explores a Proof of Concept for zero-touch provisioning and deployment, highlighting efficient operational workflows.</description>
+    </item>
+  </channel>
+</rss>
