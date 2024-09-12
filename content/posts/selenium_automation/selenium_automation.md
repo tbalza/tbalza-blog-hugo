@@ -7,12 +7,12 @@ series: ["docker"]
 ShowToc: true
 TocOpen: true
 cover:
-    image: "/posts/selenium_automation/cover.png"
+    image: "/posts/selenium_automation/cover2.png"
     hiddenInSingle: true
 summary: "This article explores an automation use-case with Selenium and Docker to periodically access a multi-page js form and check for available appointments."
 ---
 
-In the fast-paced world of DevOps and automation, efficiency and reliability are paramount. Today, we delve into a Docker-based automation script that epitomizes these qualities. Our focus is a python script that utilizes SeleniumBase to navigate through multi-page JavaScript forms to identify available appointments.
+In the world of DevOps and automation, efficiency and reliability are crucial. Today, we explore a Docker-based automation script that highlights these qualities. Our focus is a python script that utilizes SeleniumBase to navigate through multi-page JavaScript forms to identify available appointments.
 
 This script not only operates seamlessly in the background, checking for appointments, but also notifies users via email, attaching screenshots upon successful detection. This process builds on our previous discussions on deploying applications using Docker, illustrating the breadth and versatility of containerization in modern development workflows.
 

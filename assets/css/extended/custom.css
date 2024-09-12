@@ -67,6 +67,7 @@ iframe {
 .entry-footer a {
     display: inline-block;
     padding: 2px 4px; /* Minimal padding */
+    margin-bottom: 5px; /* Multiple line tag spacing */
     background-color: #f8f9fa; /* Bootstrap's light grey background */
     border: 1px solid #dee2e6; /* Bootstrap's light grey border */
     border-radius: .25rem; /* Bootstrap's border radius */
@@ -93,11 +94,28 @@ div.post-meta a {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; /* Bootstrap's transition */
     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); /* Bootstrap's box shadow */
     margin-right: 3px;
+    margin-bottom: 5px; /* Multi line tag spacing */
 }
 div.post-meta a:hover {
     color: #212529; /* Bootstrap's dark grey text color */
     background-color: #e2e6ea; /* Bootstrap's light grey hover background */
     border-color: #dae0e5; /* Bootstrap's light grey hover border */
+}
+
+/* hyperlink color within post */
+div.post-content a {
+    color: #0969da;
+    transition: color .15s ease-in-out,background-color;
+}
+
+div.post-content a:hover {
+    color: #385d86;
+}
+
+/* inline code */
+.post-content code {
+    background: #dce1ee;
+    /* color: #d5d5d6; */
 }
 
 /* style footer tags */
@@ -300,10 +318,12 @@ a, button, body, h1, h2, h3, h4, h5, h6 {
 
     .post-entry .entry-footer {
          padding-bottom: 15px;
+         padding-right: 5px;
     }
 
     .post-entry .entry-header {
         padding-top: 15px;
+        padding-right: 15px;
     }
 
     .post-entry .entry-content {
@@ -363,9 +383,11 @@ a, button, body, h1, h2, h3, h4, h5, h6 {
     align-self: center;
 }
 
+/*
 .post-entry .entry-content {
     align-self: center;
 }
+*/
 
 .post-entry .entry-footer {
     align-self: end;
@@ -412,7 +434,7 @@ details > summary {
 
 /* global font change */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     line-height: 1.5;
     margin: 0;
@@ -437,12 +459,13 @@ body {
 }
 
 #menu a {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
 
+/* Navigation, author */
 #subtitle {
-    font-family: "Helvetica Neue";
+    font-family: 'Open Sans';
     font-weight: 300;
 }
 
@@ -474,4 +497,5 @@ body {
     z-index: 1; /* Ensure it's above the content */
     box-shadow: 0 0 0 10px white; /* Adjust the color to match your background */
 }
+
 

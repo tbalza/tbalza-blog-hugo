@@ -7,7 +7,7 @@ series: ["docker"]
 ShowToc: true
 TocOpen: true
 cover:
-    image: "/posts/docker_wordpress/cover.png"
+    image: "/posts/docker_wordpress/cover2.png"
     hiddenInSingle: true
 summary: "This guide outlines the steps to launch a highly available WordPress application, structured as a four-tier architecture, using ECS for container orchestration."
 ---

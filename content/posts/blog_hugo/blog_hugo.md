@@ -7,7 +7,7 @@ series: ["Hugo Blog"]
 ShowToc: true
 TocOpen: true
 cover:
-    image: "/posts/blog_hugo/cover.jpg"
+    image: "/posts/blog_hugo/cover2.png"
     hiddenInSingle: true
 summary: "In this article we will go through the steps of setting up a static website, that will not incur in storage costs or egress fees."
 ---
