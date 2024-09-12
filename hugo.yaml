@@ -83,7 +83,7 @@ params:
             
       - Hello there! I'm a certified **AWS Certified Solutions Architect - Associate** and **HashiCorp Certified: Terraform Associate**, currently based in Barcelona, Spain.
 
-      - Here, you'll find articles and home labs, delving into topics like IaC, CI/CD pipelines, Git, Docker, Kubernetes, Cost Optimization, and Systems Design.    
+      - Here, you'll find articles about IaC, CI/CD pipelines, Git, Docker, Kubernetes, Cost Optimization, and System Design.    
 
 markup:
   goldmark:
