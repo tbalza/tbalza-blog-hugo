@@ -669,6 +669,21 @@ Using ArgoCD's RollingSync we are able to deploy the apps in the correct sequenc
 
 ### Conclusions
 
-Showcasing a Proof of Concept, this article highlights different techniques using well established open-source tools to successfully provision and deploy a complete CI/CD pipeline in a Kubernetes cluster.
+This article highlights different automation techniques using well established open-source tools to successfully provision and deploy a complete CI/CD pipeline in a Kubernetes cluster.
 
 This approach aligns with the DevOps principles of efficiency and reliability. Having a single source of truth, where configurations are defined in a declarative fashion, and a fully automated pipeline has the potential to increase the speed of deliveries across environments and reduce human error.
+
+**Areas for improvement**
+
+- **GitHub Actions**: Automate initial project setup (not just Provisioning and Deployment)
+- **Security:** Scope Access Entries, IAM Policies/Roles/Security Groups, SSM, to follow the principle of least privilege. Non-root Django container
+- **CI:** Code linting. CI tests. ECR Docker Caching
+- **Multi Environment Setup:** Implement TF workspaces with .tfvars to enable Dev, Staging, QA, Prod, environments. Implement remote state management
+- **SSO:** Configure Single Sign On for user management, and integrate with IAM permissions
+- **Software Development Life Cycle:** Implement examples with trunk-based development and tags
+- **Repo Structure:** Fix long .tf files, create directories for customer facing apps along with corresponding ApplicationSets
+- **Crucial Addons:** Install backup/DR solutions, autoscaling, cost tracking, mono repo management
+
+**Looking Ahead**
+
+For our next post, further improvements on the aspects of multi environment setups and software development lifecycle could bring this PoC closer to real-life production scenarios.
