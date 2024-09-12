@@ -12,7 +12,7 @@ cover:
 summary: "This article explores a Proof of Concept for zero-touch provisioning and deployment, highlighting efficient operational workflows."
 ---
 
-The end result of this Proof of Concept (PoC) is a fully operational Kubernetes cluster hosting a sample full-stack Django application, along with tools to manage its CI/CD and observability tasks.
+This article showcases a Proof of Concept (PoC) where the end result is a fully operational Kubernetes cluster hosting a sample full-stack Django application, along with tools to manage its CI/CD and observability tasks.
 
 ![diagram](/posts/kubernetes_cicd/diagram.drawio.png)
 
