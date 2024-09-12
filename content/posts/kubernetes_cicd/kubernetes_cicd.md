@@ -541,7 +541,7 @@ With a Config Management Plugin, we can enhance Argo CD's default capabilities t
 
 To address this, we first use `AVAILABLE_VARS=$(env | cut -d "=" -f 1 | awk '{print "$"$1}' | tr "\n" " ")` to preload all defined ENV vars necessary for Kustomization, ensuring that other scripts' variables are not replaced with blanks unintentionally.
 
-Right after, the command `kustomize build | envsubst "$AVAILABLE_VARS"` executes for each app, dynamically substituting all pre-defined variables, such as the AWS Account Number `${ARGOCD_AWS_ACCOUNT}` when defining service accounts, which would typically be static.
+Right after, the command `kustomize build | envsubst "$AVAILABLE_VARS"` executes for each app, dynamically substituting all pre-defined variables, such as the AWS Account Number `${ARGOCD_AWS_ACCOUNT}` which would typically be static.
 
 Although this approach might be seen as a GitOps anti-pattern, it is a practical solution in scenarios managing numerous AWS accounts, offering a balanced approach to automation.
 
