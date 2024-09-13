@@ -19,8 +19,8 @@ This article showcases a Proof of Concept (PoC) where the end result is a fully 
 In this project, all applications will launch and operate seamlessly after executing this command from the project home path:
 
 ```bash
-terraform -chdir="/terraform/01-eks-cluster/" apply -auto-approve && \
-terraform -chdir="/terraform/02-argocd/" apply -auto-approve
+terraform -chdir="terraform/01-eks-cluster/" apply -auto-approve && \
+terraform -chdir="terraform/02-argocd/" apply -auto-approve
 ```
 
 Each component with a web UI will automatically receive its own dynamic CNAME:
