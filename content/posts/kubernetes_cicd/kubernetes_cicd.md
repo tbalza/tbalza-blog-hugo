@@ -34,9 +34,11 @@ Each component with a web UI will automatically receive its own dynamic CNAME:
 
 and will be served behind an Application Load Balancer with a configured TLS certificate.
 
--> insert app screenhsots ..
+![app-screenshots](/posts/kubernetes_cicd/apps-r.png)
 
 Credentials are dynamically generated and accessible through SSM Parameter Store.
+
+![ssm](/posts/kubernetes_cicd/ssm.png)
 
 Once operational, any approved modifications to the Django app will automatically trigger the CI/CD pipeline (pictured in the diagram above), and new updates will be readily accessible via the generated subdomain.
 
