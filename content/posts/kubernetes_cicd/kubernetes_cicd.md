@@ -34,7 +34,7 @@ Each component with a web UI will automatically receive its own dynamic CNAME:
 
 and will be served behind an Application Load Balancer with a configured TLS certificate.
 
-![app-screenshots](/posts/kubernetes_cicd/apps-r.png)
+![app-screenshots](/posts/kubernetes_cicd/apps-r.jpg)
 
 Credentials are dynamically generated and accessible through SSM Parameter Store.
 
