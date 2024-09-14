@@ -14,6 +14,8 @@ summary: "This article explores a Proof of Concept for zero-touch provisioning a
 
 This article showcases a Proof of Concept (PoC) where the end result is a fully operational Kubernetes cluster hosting a sample full-stack Django application, along with tools to manage its CI/CD and observability tasks.
 
+You can find the complete setup on instructions in the [GitHub repository](https://github.com/tbalza/kubernetes-cicd-zt).
+
 ![diagram](/posts/kubernetes_cicd/diagram.drawio.png)
 
 In this project, all applications will launch and operate seamlessly after executing this command from the project home path:
@@ -41,8 +43,6 @@ Credentials are dynamically generated and accessible through SSM Parameter Store
 ![ssm](/posts/kubernetes_cicd/ssm.png)
 
 Once operational, any approved modifications to the Django app will automatically trigger the CI/CD pipeline (pictured in the diagram above), and new updates will be readily accessible via the generated subdomain.
-
-You can find the complete setup on instructions in the [GitHub repository](https://github.com/tbalza/kubernetes-cicd-zt).
 
 ### Tooling Overview
 
