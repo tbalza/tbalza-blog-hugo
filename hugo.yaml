@@ -15,7 +15,7 @@ menu:
       params:
     - identifier: linkedIn
       name: LinkedIn
-      url: https://www.linkedin.com/in/tomas-balza-b075141b3
+      url: https://www.linkedin.com/in/tomas-balza
       weight: 30
       params:
     - identifier: YouTube
