@@ -20,7 +20,7 @@ menu:
       params:
     - identifier: YouTube
       name: YouTube
-      url: https://www.youtube.com/@tbalza-tech
+      url: https://www.youtube.com/@tbalza-tech/videos
       weight: 40
       params:
 
