@@ -26,7 +26,8 @@ brew install bruno # An Opensource API client, we'll use for testing
 aws configure # Follow the steps to provide your AWS account credentials
 ```
 
-**(We recommend using a testing account)**
+Clone the [GitHub repo](https://github.com/tbalza/lambda-dynamodb-api).
+
 ```bash
 git clone https://github.com/tbalza/lambda-dynamodb-api.git
 cd lambda-dynamodb-api
@@ -387,4 +388,4 @@ Run this command to delete all our previously created resources and configuratio
 
 We've created an API that is publicly accessible via our Invoke URL, which allows us to interact with the DynamoDB table directly via a Lambda function.
 
-In future articles, we'll delve deeper into GitOps, and CI/CD pipelines building on this knowledge, and implement authentication, DNS and certificate configurations.
+Check out the [Zero-Touch Provisioning & Deployment of Kubernetes CI/CD Pipeline](https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/) article if you’d like to explore AWS further, this time with Kubernetes, IaC and GitOps principles.

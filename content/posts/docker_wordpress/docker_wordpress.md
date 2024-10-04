@@ -26,7 +26,7 @@ WordPress is a widely used CMS powering a significant portion of the internet's 
 
 > WordPress rose to popularity quickly because of its up-to-date development framework, extensive feature set, flexibility, rapid and multilingual publishing ability, multi-author support, and thriving community. Thousands of free and commercial themes and plugins are available to extend and personalize WordPress for just about every situation. (From [bitnami.com](https://bitnami.com/stack/wordpress))
 
-Traditionally, WordPress operates as a monolithic application. However, by leveraging Docker, AWS RDS, and EFS, we can transform it into a stateless architecture. This decouples the computing layer from the rest of the infrastructure, enhancing flexibility. Specifically, it allows us to run multiple servers behind load balancers, thereby achieving high availability.
+Even though WordPress operates as a monolithic application, by leveraging Docker, AWS RDS, and EFS, we can transform it into a stateless architecture. This decouples the computing layer from the rest of the infrastructure, enhancing flexibility. Specifically, it allows us to run multiple servers behind load balancers, thereby achieving high availability.
 
 In this setup, Docker containers play a crucial role by encapsulating the WordPress application, making it portable and consistent across different computing environments. This ties into the broader architectural tiers by ensuring the application layer is both scalable and resilient.
 
@@ -44,9 +44,9 @@ In our projects, we prioritize technologies that embrace modern development meth
 
 **Automation Focus**
 
-This guide primarily covers automation techniques for deployments, project structuring, while deferring in-depth development principles to another discussion.
+This guide focuses on declarative provisioning and deployment.
 
-Please note, while AWS resources may lead to costs, our Terraform-guided process simplifies the removal of all resources with the terraform destroy command to prevent unnecessary expenses.
+Please note, while AWS resources will incur costs, our Terraform-guided process simplifies the removal of all resources with the terraform destroy command to prevent unnecessary expenses. 
 
 **Container Orchestration with ECS on EC2**
 
@@ -578,7 +578,7 @@ Since we're not on fargate, our ec2 instance needs to know that it belongs to de
 
 It also needs to install the efs-utils agent, and mount it to `/mnt/efs` before the container runs, so it can successfully mount the persistent volume defined earlier in the container definitions.
 
-Without this crucial step or instance won't be ready to connect to the container, and the volume will not mount correctly, and instead create internal volumes on the attached SSD very time it's instantiated,
+Without this crucial step or instance won't be ready to connect to the container, and the volume will not mount correctly, and instead create internal volumes on the attached SSD every time it's instantiated,
 
 ![efs-error](/posts/docker_wordpress/efs-error.png)
 
@@ -964,4 +964,4 @@ We've successfully set up a high-availability environment ensuring our applicati
 
 #### Looking Ahead
 
-In our next piece, we'll dive into the implementation of CI/CD systems and explore real-world production scenarios, including Git operations and rolling updates, to further enhance our setup.
+While ECS has non-trivial cost advantages, and it’s simpler to set up, EKS allows for more granular control when using Kubernetes — and it might be better suited for more established operations. Check out our [Zero-Touch Provisioning & Deployment of Kubernetes CI/CD Pipeline](https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/) article to see a working Proof of Concept that covers more advanced topics on this subject.
