@@ -93,7 +93,7 @@ resource "aws_ec2_client_vpn_endpoint" "cvpn" {
   }
 }
 ```
-Here we create the VPN Endpoint with split-tunnel and "Mutual Authentication" which uses certificates for access control. Making the use of ACM we can streamline the setup for this scenario. The client cidr argument refers to the IP range connected customers will have, which is separate from the subnet range.
+Here we create the VPN Endpoint with split-tunnel and "Mutual Authentication" which uses certificates for access control. Making the use of ACM we can streamline the setup for this scenario. The client cidr argument refers to the IP range connected remote workers will have, which is separate from the subnet range.
 
 #### VPN/VPC Association
 ```hcl
@@ -176,7 +176,7 @@ resource "tls_self_signed_cert" "ca_cert" {
   ]
 }
 ```
-Leveraging ACM and using the `tls` provider we can use self-signed certificates, simplifying the process as we don't need a custom Certificate Authority. This provider replaces the use of `easyrsa` and makes our configuration self-contained and dynamic. 
+Leveraging ACM and using the `tls` provider we can use self-signed certificates, simplifying the process as we'll assume we don't need a custom Certificate Authority in this example. This provider replaces the use of `easyrsa` and makes our configuration self-contained and dynamic. 
 
 #### Server
 ```hcl
@@ -285,4 +285,4 @@ This last code block uses the local-exec provisioner to automatically prepare th
 
 ### Conclusions
 
-We've gone over a Terraform script that streamlines the setup for AWS Client VPN. It showcases a best-practice workflow that reduces overhead and human error by declaratively defining our infrastructure configuration.
+We've reviewed a Terraform configuration that simplifies the AWS Client VPN deployment. This setup demonstrates a workflow in the spirit of best practices, reducing overhead and human error by declaratively defining our infrastructure.
