@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Tomas Balza</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://tbalza.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Provisioning Amazon Client VPN with Terraform</title>
+      <link>https://tbalza.net/provisioning-amazon-client-vpn-with-terraform/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://tbalza.net/provisioning-amazon-client-vpn-with-terraform/</guid>
+      <description>In this article we&amp;rsquo;ll provision an AWS Client VPN, mimicking a typical scenario used when accessing corporate networks securely. All done in a single step.</description>
+    </item>
     <item>
       <title>Zero-Touch Provisioning &amp; Deployment of Kubernetes CI/CD Pipeline</title>
       <link>https://tbalza.net/zero-touch-provisioning-deployment-of-kubernetes-ci/cd-pipeline/</link>
