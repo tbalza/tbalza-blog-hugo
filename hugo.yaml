@@ -47,8 +47,8 @@ params:
   env: production
   description: "Tomas Balza"
   DateFormat: "January, 2006"
-  defaultTheme: auto
-  # disableThemeToggle: true
+  defaultTheme: light
+  disableThemeToggle: true
   ShowShareButtons: false
   ShowReadingTime: false
   # disableSpecial1stPost: true
